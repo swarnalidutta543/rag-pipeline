@@ -18,12 +18,6 @@ def generate_answer(prompt: str) -> str:
 
     return response.output_text
 
-#     response = client.responses.create(
-#         model="gpt-4.1-mini",
-#         input=prompt
-#     )
-
-#     return response.output_text
-
 # answer = generate_response(query, retrieved_documents)
+
 # print(answer)
