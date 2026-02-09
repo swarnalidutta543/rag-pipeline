@@ -10,4 +10,4 @@ LLM_MODEL = "gpt-4.1-mini"
 
 CHROMA_COLLECTION = "china"
 CHROMA_PATH = "chroma_db"
-# UPLOAD_DIR = "baby_programming/raw_docs"
+
