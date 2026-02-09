@@ -23,6 +23,7 @@ def retrieve_context(query: str) -> str:
 
     return "\n\n".join(retrieved_documents)
 
-context = retrieve_context(query)
+# context = retrieve_context(query)
 
 # print(context)
+
