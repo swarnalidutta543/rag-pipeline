@@ -36,11 +36,3 @@ path = "china_revolution.txt"
 add_documents(get_collection(), split_documents(load_text_file(path)))
 
 
-
-# collection.add(
-#     documents=chunks,
-#     ids=[f"chunk_{i}" for i in range(len(chunks))]
-# )
-
-
-# print(f"Added {len(chunks)} chunks.")
