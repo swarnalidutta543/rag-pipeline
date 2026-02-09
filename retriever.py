@@ -2,11 +2,11 @@
 
 from config import TOP_K, SIMILARITY_THRESHOLD
 from vectorstore import get_collection
-query = "pointers on the influence of japan in china?"
-# query = "Write a note on railways in china"
+
+# query = "pointers on the influence of japan in china?"
+
 def retrieve_context(query: str) -> str:
     collection = get_collection()
-    # print("COLLECTION COUNT:", collection.count())
     results = collection.query(
         query_texts=[query],
         n_results=TOP_K
@@ -24,4 +24,5 @@ def retrieve_context(query: str) -> str:
     return "\n\n".join(retrieved_documents)
 
 context = retrieve_context(query)
+
 # print(context)
