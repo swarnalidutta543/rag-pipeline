@@ -10,9 +10,8 @@ from llm import generate_answer
 from helper_utils import join_docs
 from config import CHROMA_PATH
 
-# -----------------------------
+
 # Streamlit page config
-# -----------------------------
 st.set_page_config(
     page_title="RAG Question Answering",
     layout="wide"
@@ -58,13 +57,10 @@ def set_background(image_file):
         """,
         unsafe_allow_html=True
     )
-# 👇 your downloaded PNG file
 set_background("china.png")
 
-
-# -----------------------------
 # Index document ONCE
-# -----------------------------
+
 @st.cache_resource
 def index_fixed_document():
     """
@@ -84,10 +80,7 @@ def index_fixed_document():
 
 # Run indexing
 index_fixed_document()
-
-# -----------------------------
 # Question answering UI
-# -----------------------------
 st.header("Find out interesting facts about the Chinese Revolution!")
 
 query= st.text_input(
@@ -112,25 +105,10 @@ if st.button("Answer"):
             unsafe_allow_html=True
         )
 
-        # # -------- Context box --------
-        # st.markdown(
-        #     """
-        #     <div class="overlay-box">
-        #         <h3>Retrieved Context</h3>
-        #     """,
-        #     unsafe_allow_html=True
-        # )
-
-        # for i, doc in enumerate(context.split("\n\n")[:5], 1):
-        #     st.markdown(f"**{i}.** {doc[:900]}")
-
-        # st.markdown("</div>", unsafe_allow_html=True)
-        # # st.subheader("Answer")
-        # # st.write(answer)
-
-        # # with st.expander("📄 Retrieved Context"):
+        # # with st.expander(" Retrieved Context"):
         # #     for i, doc in enumerate(context.split("\n\n")[:5], 1):
         # #         st.markdown(f"** {i}**")
         # #         st.write(doc[:1000])
         
+
 
