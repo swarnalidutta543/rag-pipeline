@@ -1,1 +1,1 @@
-# rag-pipeline
+This project implements a simple Retrieval-Augmented Generation (RAG) pipeline from scratch. A book is ingested as the knowledge source, indexed using embeddings, and used to build an application that allows users to ask questions and receive answers grounded in the retrieved content.
