@@ -2,19 +2,9 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from langchain_core.documents import Document
 from config import CHUNK_SIZE, CHUNK_OVERLAP
-# import umap
 
 # Load environment variables from .env file
 load_dotenv()
-
-# openai_key = os.getenv("OPENAI_API_KEY")
-# client = OpenAI(api_key=openai_key)
-
-# path = "china_revolution.txt"
-
-# ingestion.py
-
-# path = "china_revolution.txt"
 
 def load_text_file(path: str) -> str:
     with open(path, "r", encoding="utf-8") as f:
@@ -34,5 +24,6 @@ def split_documents(text: str) -> list[str]:
     # print(chunks[10])
     print(f"\nTotal chunks: {len(chunks)}")
     return chunks
+
 
 
